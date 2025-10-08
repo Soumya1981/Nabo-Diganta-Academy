@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Nabo Diganta Academy</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <script src="./script.js"></script> -->
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+
+    <body class="font-sans bg-gray-50">
+
+        <!-- Responsive Navigation -->
+        <nav class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+            <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+                <a href="#home" class="flex items-center space-x-2">
+                    <!-- Logo Image -->
+                    <img src="./Images/Logo.jpg" alt="Logo" class="h-8 w-8" />
+                    <!-- Brand Name -->
+                    <!-- <span class="font-extrabold text-yellow-600 text-xl">Nabo Diganta</span> -->
+                </a>
+                <button id="menu-btn"
+                    class="md:hidden flex items-center px-3 py-2 border rounded text-gray-600 border-yellow-500">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <div id="menu" class="hidden md:flex gap-6 items-center">
+                    <a href="#home" class="font-semibold hover:text-yellow-500">Home</a>
+                    <a href="#about" class="font-semibold hover:text-yellow-500">About Us</a>
+                    <a href="#faculty" class="font-semibold hover:text-yellow-500">Faculty</a>
+                    <a href="#admissions" class="font-semibold hover:text-yellow-500">Admissions</a>
+                    <a href="#events" class="font-semibold hover:text-yellow-500">Events</a>
+                    <a href="#gallery" class="font-semibold hover:text-yellow-500">Gallery</a>
+                    <a href="#contact" class="font-semibold hover:text-yellow-500">Contact</a>
+                    <a href="#login" class="font-semibold hover:text-yellow-500">Login</a>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden flex-col bg-white px-4 pb-3">
+                <a href="#home" class="block py-1 font-semibold hover:text-yellow-500">Home</a>
+                <a href="#about" class="block py-1 font-semibold hover:text-yellow-500">About Us</a>
+                <a href="#faculty" class="block py-1 font-semibold hover:text-yellow-500">Faculty</a>
+                <a href="#admissions" class="block py-1 font-semibold hover:text-yellow-500">Admissions</a>
+                <a href="#events" class="block py-1 font-semibold hover:text-yellow-500">Events</a>
+                <a href="#gallery" class="block py-1 font-semibold hover:text-yellow-500">Gallery</a>
+                <a href="#contact" class="block py-1 font-semibold hover:text-yellow-500">Contact</a>
+                <a href="#login" class="block py-1 font-semibold hover:text-yellow-500">Login</a>
+            </div>
+        </nav>
+
+        <!-- Home -->
+        <section id="home"
+            class="pt-24 min-h-[60vh] flex flex-col items-center justify-center relative bg-cover bg-center"
+            style="background-image: url('./Images/pexels-caleboquendo-3042432.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 text-center text-white p-5 max-w-2xl">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Welcome to Nabo Diganta Academy</h1>
+                <p class="text-lg md:text-xl mb-6">Empowering young minds for a brighter future.</p>
+                <a href="#login">
+                    <button class="bg-yellow-500 px-6 py-3 rounded font-bold hover:bg-yellow-600 transition">Get
+                        Started</button>
+                </a>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about"
+            class="flex flex-col md:flex-row items-center py-10 md:py-16 px-4 md:px-16 bg-white max-w-7xl mx-auto gap-8">
+            <div class="md:w-1/2">
+                <h2 class="text-2xl md:text-4xl font-bold mb-6">About Nabo Diganta Academy</h2>
+                <p class="text-base md:text-lg text-gray-700">
+                    Established in 2025, Nabo Diganta Academy is dedicated to fostering academic excellence and personal
+                    growth.
+                    Our mission is to inspire students and prepare them for a brighter future through a comprehensive
+                    and innovative curriculum.
+                </p>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="./Images/Campus Building.jpg" alt="Campus Building"
+                    class="rounded shadow-lg w-full max-w-xs md:max-w-md object-cover" />
+            </div>
+        </section>
+
+        <!-- Faculty -->
+        <section id="faculty" class="py-10 md:py-16 bg-gray-100 max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="text-2xl md:text-3xl text-center font-bold mb-12">Meet Our Faculty</h2>
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center hover:shadow-yellow-400 transition-shadow duration-300">
+                    <img src="./Images/Salauddin Mandal.jpg" alt="Salauddin Mandal"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Salauddin Mandal</h3>
+                    <p class="text-red-600">Principal</p>
+                    <p class="text-gray-800">Geography</p>
+                    <p class="text-gray-600">B.A, M.A, B.Ed</p>
+                </div>
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center hover:shadow-yellow-400 transition-shadow duration-300">
+                    <img src="./Images/Runa Laila.jpg" alt="Runa Laila"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Runa Laila</h3>
+                    <p class="text-gray-800">Bengali</p>
+                    <p class="text-gray-600">B.A, Computer Diploma</p>
+                </div>
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center hover:shadow-yellow-400 transition-shadow duration-300">
+                    <img src="01.09.2025_00.24.18_REC.jpg" alt="Sohel Rana"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Sohel Rana</h3>
+                    <p class="text-gray-800">Mathematics</p>
+                    <p class="text-gray-600">B.Sc, M.Sc, D.Ed, B.Ed</p>
+                </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Samim Akhtar.jpg" alt="Samim Akhtar"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Samim Akhtar</h3>
+                    <p class="text-gray-800">History</p>
+                    <p class="text-gray-600">B.A, M.A, B.Ed</p>
+                </div>
+
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="01.09.2025_00.25.14_REC.jpg" alt="Sk Md Tarik Aziz"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Sk Md Tarik Aziz</h3>
+                    <p class="text-gray-800">English</p>
+                    <p class="text-gray-600">B.A, B.Ed</p>
+                </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Mamoni Khatun.jpg" alt="Mamoni Khatun"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Mamoni Khatun</h3>
+                    <p class="text-gray-800">Bengali</p>
+                    <p class="text-gray-600">B.A, Computer Diploma</p>
+                </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Soheli Biswas.jpg" alt="Soheli Biswas"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Soheli Biswas</h3>
+                    <p class="text-gray-800">English</p>
+                    <p class="text-gray-600">B.A, D.Ed</p>
+                </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Azizur Rahaman.jpg" alt="Azizur Rahaman"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Azizur Rahaman</h3>
+                    <p class="text-gray-800">Accountent</p>
+                    <p class="text-gray-600">B.A</p>
+                </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Monalisa Akther Banu.jpg" alt="Monalisa Akther Banu"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Monalisa Akter Banu</h3>
+                    <p class="text-gray-800">Education</p>
+                    <p class="text-gray-600">B.A, M.A, B.Ed</p>
+                </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Erina Khatun.jpg" alt="Erina Khatun"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Erina Khatun</h3>
+                    <p class="text-gray-800">Bengali</p>
+                    <p class="text-gray-600">B.A</p>
+                </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Faruk Ahamed.jpg" alt="Faruk Ahamed"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Faruk Ahamed</h3>
+                    <p class="text-gray-800">Education</p>
+                    <p class="text-gray-600">B.A, M.A, B.Ed</p>
+                </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Safiul Ansary.jpg" alt="Safiul Ansary"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Safiul Ansary</h3>
+                    <p class="text-gray-800">History</p>
+                    <p class="text-gray-600">B.A, M.A, D.Ed</p>
+                </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Debika Sultana.jpg" alt="Debika Sultana"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Debika Sultana</h3>
+                    <p class="text-gray-800">Genarel</p>
+                    <p class="text-gray-600">B.A</p>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-8">
+                <button id="see-more-btn"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded shadow transition">
+                    See More
+                </button>
+                <button id="show-less-btn"
+                    class="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded shadow transition hidden">
+                    Show Less
+                </button>
+            </div>
+        </section>
+
+        <!-- Admissions -->
+        <section id="admissions" class="py-10 md:py-16 max-w-7xl mx-auto px-4 md:px-16 bg-white">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Admissions Open</h2>
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
+                <div
+                    class="bg-gray-100 rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
+                    <img src="./Images/Professional Training.jpg" alt="Professional Training"
+                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-2">Professional Training</h3>
+                    <p class="text-gray-700">
+                        Unlock your potential with our career-focused programs.
+                    </p>
+                </div>
+                <div
+                    class="bg-gray-100 rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
+                    <img src="./Images/Modern Infrastructure.jpg" alt="Modern Infrastructure"
+                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-2">Modern Infrastructure</h3>
+                    <p class="text-gray-700">
+                        Experience state-of-the-art facilities and learning tools.
+                    </p>
+                </div>
+                <div
+                    class="bg-gray-100 rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
+                    <img src="./Images/Hands-on Learning.jpg" alt="Hands-on Learning"
+                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-2">Hands-on Learning</h3>
+                    <p class="text-gray-700">
+                        Apply your knowledge through practical experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events -->
+        <section id="events" class="py-10 md:py-16 bg-gray-100 max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Upcoming Events</h2>
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
+                    <img src="./Images/Professional Showcase.jpg" alt="Professional Showcase"
+                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-2">Professional Showcase</h3>
+                    <p class="text-gray-700">
+                        Learn about our professional training programs at this exclusive event.
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
+                    <img src="./Images/Innovation Drive.jpg" alt="Innovation Drive"
+                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-2">Innovation Drive</h3>
+                    <p class="text-gray-700">
+                        Witness groundbreaking creativity and innovation at this event.
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
+                    <img src="./Images/Hands-on Learning.jpg" alt="Hands-on Workshop"
+                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-2">Hands-on Workshop</h3>
+                    <p class="text-gray-700">
+                        Engage in practical learning experiences at our interactive workshop.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="py-10 md:py-16 max-w-7xl mx-auto px-4 md:px-16 bg-white">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Gallery</h2>
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-6">
+                <img src="./Images/Gallery1.jpg" alt="Gallery image 1"
+                    class="rounded-xl shadow-lg h-52 md:h-64 w-full sm:w-96 object-cover" />
+                <img src="./Images/Gallery2.jpg" alt="Gallery image 2"
+                    class="rounded-xl shadow-lg h-52 md:h-64 w-full sm:w-96 object-cover" />
+                <img src="./Images/Gallery3.jpg" alt="Gallery image 3"
+                    class="rounded-xl shadow-lg h-52 md:h-64 w-full sm:w-96 object-cover" />
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-10 md:py-16 bg-gray-100 max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-6 mb-10">
+                <img src="01.09.2025_00.26.54_REC.jpg" alt="Contact 1"
+                    class="rounded-xl shadow-lg h-44 md:h-56 w-full sm:w-80 object-cover" />
+                <img src="01.09.2025_00.27.14_REC.jpg" alt="Contact 2"
+                    class="rounded-xl shadow-lg h-44 md:h-56 w-full sm:w-80 object-cover" />
+                <img src="01.09.2025_00.26.26_REC.jpg" alt="Contact 3"
+                    class="rounded-xl shadow-lg h-44 md:h-56 w-full sm:w-80 object-cover" />
+            </div>
+            <form class="max-w-xl mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                <label for="name" class="block font-semibold mb-1">Full Name</label>
+                <input id="name" type="text" placeholder="Your Full Name"
+                    class="w-full mb-4 px-4 py-3 border rounded focus:outline-yellow-400" />
+                <label for="email" class="block font-semibold mb-1">Email Address</label>
+                <input id="email" type="email" placeholder="Your Email"
+                    class="w-full mb-4 px-4 py-3 border rounded focus:outline-yellow-400" />
+                <label for="message" class="block font-semibold mb-1">Message</label>
+                <textarea id="message" rows="4" placeholder="Your Message"
+                    class="w-full mb-4 px-4 py-3 border rounded focus:outline-yellow-400"></textarea>
+                <button type="submit"
+                    class="bg-yellow-500 text-white font-bold px-6 py-3 rounded hover:bg-yellow-600 transition w-full">Send</button>
+            </form>
+        </section>
+
+        <!-- Floating Login Modal -->
+        <div id="login-modal-bg" class="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center hidden">
+            <div class="bg-white p-6 md:p-10 rounded-xl shadow-2xl w-full max-w-xs md:max-w-md">
+                <h2 class="text-xl md:text-2xl font-bold text-center mb-6">Login to Your Account</h2>
+                <form>
+                    <label for="loginEmail" class="block mb-2 font-semibold">Email Address</label>
+                    <input id="loginEmail" type="email" placeholder="Email Address" required
+                        class="w-full mb-3 px-4 py-3 border rounded focus:outline-yellow-400" />
+                    <label for="loginPassword" class="block mb-2 font-semibold">Password</label>
+                    <input id="loginPassword" type="password" placeholder="Password" required
+                        class="w-full mb-3 px-4 py-3 border rounded focus:outline-yellow-400" />
+                    <div class="flex flex-col sm:flex-row items-center justify-between mb-5 gap-2">
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" />
+                            Remember me
+                        </label>
+                        <a href="#" class="text-yellow-500 hover:underline text-sm">Forgot password?</a>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-yellow-500 text-white font-bold py-3 rounded hover:bg-yellow-600 transition">Login</button>
+                    <p class="text-center mt-4 text-sm">Don't have an account?
+                        <a href="#" class="text-blue-700 font-semibold hover:underline">Sign up</a>
+                    </p>
+                    <button type="button" onclick="closeLogin()"
+                        class="absolute top-2 right-3 md:top-4 md:right-5 text-gray-400 hover:text-gray-900 text-2xl font-bold">&times;</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Mobile menu script -->
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const menu = document.getElementById('menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Hide mobile menu on navigation
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            const btn = document.getElementById('see-more-btn');
+                btn.addEventListener('click', () => {
+                    // .faculty-card, skip first 3 (0,1,2): reveal next 3, then next 3 etc.
+                    const all = Array.from(document.querySelectorAll('.faculty-card'));
+                    const hidden = all.filter(card => card.classList.contains('hidden'));
+                    if (hidden.length) {
+                        hidden.slice(0, 3).forEach(card => card.classList.remove('hidden'));
+                        // Hide button if none left
+                        if (hidden.length <= 3) btn.classList.add('hidden');
+                    }
+                });
+            const batchSize = 0;
+                const seeMoreBtn = document.getElementById('see-more-btn');
+                const showLessBtn = document.getElementById('show-less-btn');
+                const facultyCards = Array.from(document.querySelectorAll('.faculty-card'));
+                let expandedCount = batchSize;
+
+                seeMoreBtn.addEventListener('click', function () {
+                    const hidden = facultyCards.filter(card => card.classList.contains('hidden'));
+                    if (hidden.length) {
+                        hidden.slice(0, batchSize).forEach(card => card.classList.remove('hidden'));
+                        expandedCount += batchSize;
+                    }
+                    if (facultyCards.filter(card => card.classList.contains('hidden')).length === 0) {
+                        seeMoreBtn.classList.add('hidden');
+                        showLessBtn.classList.remove('hidden');
+                    }
+                });
+
+                showLessBtn.addEventListener('click', function () {
+                        facultyCards.slice(batchSize).forEach(card => card.classList.add('hidden'));
+                        seeMoreBtn.classList.remove('hidden');
+                        showLessBtn.classList.add('hidden');
+                        expandedCount = batchSize;
+                        window.scrollTo({ top: document.getElementById('faculty').offsetTop - 80, behavior: "smooth" });
+                    });
+        </script>
+    </body>
+
+    
+    
+    <!-- Navigation Button triggers the modal -->
+    <script>
+        // Open Login Modal when clicking login link
+        document.querySelectorAll('a[href="#login"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById("login-modal-bg").classList.remove("hidden");
+            });
+        });
+
+        // Close modal function
+        function closeLogin() {
+            document.getElementById("login-modal-bg").classList.add("hidden");
+        }
+
+        // Optional: close modal by clicking outside box
+        document.getElementById("login-modal-bg").addEventListener("click", function (e) {
+            if (e.target === this) closeLogin();
+        });
+    </script>
+
+
+</html>
