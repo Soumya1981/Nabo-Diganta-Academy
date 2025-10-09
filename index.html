@@ -5,13 +5,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Nabo Diganta Academy</title>
+        
+        <!-- TailwindCSS CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
-        <!-- <script src="./script.js"></script> -->
+        
+        <!-- Boxicons & FontAwesome -->
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
         <style>
             html {
                 scroll-behavior: smooth;
             }
         </style>
+        
     </head>
 
     <body class="font-sans bg-gray-50">
@@ -70,6 +76,16 @@
                 </a>
             </div>
         </section>
+        
+        <!-- News Ticker -->
+        <div class="bg-gray-600 text-white py-2 overflow-hidden">
+            <div id="news-ticker" class="whitespace-nowrap flex gap-10 px-4">
+                <span>📰 Admissions open for 2026</span>
+                <span>🧑‍🏫 New computer lab inaugurated</span>
+                <span>🎓 Annual function on 25th December</span>
+                <span>🚌 School bus service extended to nearby towns</span>
+            </div>
+        </div>
 
         <!-- About -->
         <section id="about"
@@ -87,6 +103,24 @@
                 <img src="./Images/Campus Building.jpg" alt="Campus Building"
                     class="rounded shadow-lg w-full max-w-xs md:max-w-md object-cover" />
             </div>
+
+            <section class="bg-yellow-50 rounded-lg shadow-md mx-6 md:mx-20 mt-1 py-6">
+                <h2 class="text-center text-2xl font-bold text-yellow-800 mb-3">
+                    📰 Latest News
+                </h2>
+            
+                <div id="news-container" class="h-32 overflow-hidden text-center text-lg font-medium text-gray-700 space-y-2">
+                    <div id="news-content">
+                        <p>🎓 Admission Open for 2025-26 Academic Year!</p>
+                        <p>🏆 Our students won the District Science Fair!</p>
+                        <p>📢 Parent-Teacher Meeting scheduled for October 15th.</p>
+                        <p>🩺 Free Health Checkup Camp on October 20th.</p>
+                        <p>📚 Mid-term Exams start from November 5th.</p>
+                        <p>🎨 Annual Art Exhibition coming soon!</p>
+                    </div>
+                </div>
+            </section>
+
         </section>
 
         <!-- Faculty -->
@@ -189,6 +223,13 @@
                     <p class="text-gray-800">Genarel</p>
                     <p class="text-gray-600">B.A</p>
                 </div>
+                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
+                    <img src="./Images/Mahabul Islam.jpg" alt="Mahabul Islam"
+                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
+                    <h3 class="text-lg md:text-2xl font-bold mb-1">Mahabul Islam</h3>
+                    <p class="text-gray-800">Theology</p>
+                    <p class="text-gray-600">B.A,M.A,B.ED</p>
+                </div>
             </div>
 
             <div class="flex justify-center mt-8">
@@ -234,6 +275,12 @@
                         Apply your knowledge through practical experiences.
                     </p>
                 </div>
+                <button
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-lg transition duration-300">
+                    <a href="https://www.facebook.com/share/1AV9rPmP1Z/" target="_blank" >Admission Now</a>
+                    
+                </button>
+
             </div>
         </section>
 
@@ -287,15 +334,18 @@
         <!-- Contact -->
         <section id="contact" class="py-10 md:py-16 bg-gray-100 max-w-7xl mx-auto px-4 md:px-16">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Contact Us</h2>
-            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-6 mb-10">
-                <img src="01.09.2025_00.26.54_REC.jpg" alt="Contact 1"
-                    class="rounded-xl shadow-lg h-44 md:h-56 w-full sm:w-80 object-cover" />
-                <img src="01.09.2025_00.27.14_REC.jpg" alt="Contact 2"
-                    class="rounded-xl shadow-lg h-44 md:h-56 w-full sm:w-80 object-cover" />
-                <img src="01.09.2025_00.26.26_REC.jpg" alt="Contact 3"
-                    class="rounded-xl shadow-lg h-44 md:h-56 w-full sm:w-80 object-cover" />
-            </div>
-            <form class="max-w-xl mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-4xl mx-auto">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="School Building"
+                        class="rounded-xl shadow-lg h-44 md:h-56 w-full sm:w-80 object-cover" />
+                    <div class="text-center md:text-left">
+                        <p><i class="fa-solid fa-location-dot text-blue-700 mr-2"></i>Aminabad,Domkal, Murshidabad, West Bengal, India, 742406</p>
+                        <p><i class="fa-solid fa-phone text-blue-700 mr-2"></i>+91 8918051055</p>
+                        <p><i class="fa-solid fa-phone text-blue-700 mr-2"></i>+91 9064431499</p>
+                        <p><i class="fa-solid fa-phone text-blue-700 mr-2"></i>+91 9593529632</p>
+                        <p><i class="fa-solid fa-envelope text-blue-700 mr-2"></i>contact@nabodiganta.org</p>
+                    </div>
+                </div>
+            <!-- <form class="max-w-xl mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg">
                 <label for="name" class="block font-semibold mb-1">Full Name</label>
                 <input id="name" type="text" placeholder="Your Full Name"
                     class="w-full mb-4 px-4 py-3 border rounded focus:outline-yellow-400" />
@@ -307,7 +357,7 @@
                     class="w-full mb-4 px-4 py-3 border rounded focus:outline-yellow-400"></textarea>
                 <button type="submit"
                     class="bg-yellow-500 text-white font-bold px-6 py-3 rounded hover:bg-yellow-600 transition w-full">Send</button>
-            </form>
+            </form> -->
         </section>
 
         <!-- Floating Login Modal -->
@@ -339,82 +389,34 @@
             </div>
         </div>
 
-        <!-- Mobile menu script -->
-        <script>
-            const menuBtn = document.getElementById('menu-btn');
-            const menu = document.getElementById('menu');
-            const mobileMenu = document.getElementById('mobile-menu');
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            // Hide mobile menu on navigation
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
+        <footer class="bg-gray-900 text-white mt-auto py-6">
+            <div class="container mx-auto text-center space-y-3">
+                <h3 class="text-xl font-semibold">Nabo Diganta Academy</h3>
+        
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.facebook.com/share/1AV9rPmP1Z/" target="_blank" class="text-blue-500 hover:text-white">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-sky-400 hover:text-white">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-white">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="text-blue-400 hover:text-white">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+        
+                <p class="text-sm text-gray-400">
+                    © <span id="year"></span> All Rights Reserved | Designed by Nabo Diganta Academy
+                </p>
+            </div>
+        </footer>
+        
 
-            const btn = document.getElementById('see-more-btn');
-                btn.addEventListener('click', () => {
-                    // .faculty-card, skip first 3 (0,1,2): reveal next 3, then next 3 etc.
-                    const all = Array.from(document.querySelectorAll('.faculty-card'));
-                    const hidden = all.filter(card => card.classList.contains('hidden'));
-                    if (hidden.length) {
-                        hidden.slice(0, 3).forEach(card => card.classList.remove('hidden'));
-                        // Hide button if none left
-                        if (hidden.length <= 3) btn.classList.add('hidden');
-                    }
-                });
-            const batchSize = 0;
-                const seeMoreBtn = document.getElementById('see-more-btn');
-                const showLessBtn = document.getElementById('show-less-btn');
-                const facultyCards = Array.from(document.querySelectorAll('.faculty-card'));
-                let expandedCount = batchSize;
-
-                seeMoreBtn.addEventListener('click', function () {
-                    const hidden = facultyCards.filter(card => card.classList.contains('hidden'));
-                    if (hidden.length) {
-                        hidden.slice(0, batchSize).forEach(card => card.classList.remove('hidden'));
-                        expandedCount += batchSize;
-                    }
-                    if (facultyCards.filter(card => card.classList.contains('hidden')).length === 0) {
-                        seeMoreBtn.classList.add('hidden');
-                        showLessBtn.classList.remove('hidden');
-                    }
-                });
-
-                showLessBtn.addEventListener('click', function () {
-                        facultyCards.slice(batchSize).forEach(card => card.classList.add('hidden'));
-                        seeMoreBtn.classList.remove('hidden');
-                        showLessBtn.classList.add('hidden');
-                        expandedCount = batchSize;
-                        window.scrollTo({ top: document.getElementById('faculty').offsetTop - 80, behavior: "smooth" });
-                    });
-        </script>
+        <!-- External JS -->
+        <script src="main.js"></script>
     </body>
-
-    
-    
-    <!-- Navigation Button triggers the modal -->
-    <script>
-        // Open Login Modal when clicking login link
-        document.querySelectorAll('a[href="#login"]').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.getElementById("login-modal-bg").classList.remove("hidden");
-            });
-        });
-
-        // Close modal function
-        function closeLogin() {
-            document.getElementById("login-modal-bg").classList.add("hidden");
-        }
-
-        // Optional: close modal by clicking outside box
-        document.getElementById("login-modal-bg").addEventListener("click", function (e) {
-            if (e.target === this) closeLogin();
-        });
-    </script>
-
 
 </html>
