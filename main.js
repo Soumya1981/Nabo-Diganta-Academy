@@ -97,3 +97,13 @@ document.querySelectorAll('a[href="#login"]').forEach(link => {
         document.getElementById("login-modal-bg").addEventListener("click", function (e) {
             if (e.target === this) closeLogin();
         });
+
+
+        // Simple JavaScript for sliding gallery
+  const slides = document.querySelectorAll('#gallery-slider .gallery-slide');
+  let idx = 0;
+  setInterval(() => {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 2500);

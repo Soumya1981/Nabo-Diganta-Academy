@@ -12,11 +12,8 @@
         <!-- Boxicons & FontAwesome -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
-        </style>
+
+        <link rel="stylesheet" href="./style.css" />
         
     </head>
 
@@ -89,20 +86,35 @@
 
         <!-- About -->
         <section id="about"
-            class="flex flex-col md:flex-row items-center py-10 md:py-16 px-4 md:px-16 bg-white max-w-7xl mx-auto gap-8">
-            <div class="md:w-1/2">
+            class="bg-cover bg-center bg-opacity-10 flex flex-col md:flex-row items-center py-10 md:py-16 px-4 md:px-16 bg-white max-w-7xl mx-auto gap-8" 
+            style="background-image: url('./Images/Campus\ Building.jpg');">
+            <div class="md:w-1/2 bg-yellow-50 rounded-lg">
                 <h2 class="text-2xl md:text-4xl font-bold mb-6">About Nabo Diganta Academy</h2>
                 <p class="text-base md:text-lg text-gray-700">
-                    Established in 2025, Nabo Diganta Academy is dedicated to fostering academic excellence and personal
-                    growth.
-                    Our mission is to inspire students and prepare them for a brighter future through a comprehensive
-                    and innovative curriculum.
+                    "নতুন প্রজন্মের নতুন দিগন্ত" <br>
+                    
+                    📚 Admission Open – 2025 <br>
+                    ভর্তি চলছে Nursery থেকে Class V পর্যন্ত! <br>
+                    <br>
+                    🌟 আমাদের বিশেষত্বঃ <br>
+                    ✅ অভিজ্ঞ ও যত্নশীল শিক্ষক/শিক্ষিকা বৃন্দ <br>
+                    ✅ স্মার্ট ক্লাসরুম ও আধুনিক শিক্ষাব্যবস্থা <br>
+                    ✅ খেলাধুলা, সাংস্কৃতিক কার্যক্রম ও নৈতিক শিক্ষা <br>
+                    ✅ নিয়মিত গার্ডিয়ান মিটিং ও প্রগ্রেস রিপোর্ট <br>
+                    ✅ পরিচ্ছন্ন ও নিরাপদ পরিবেশ <br>
+                    ✅ সিসি টিভির আওতাধীন নিজস্ব সুবিশাল কম্পাউন্ড <br>
+                    ✅ দুস্থ মেধাবী ছাত্র ছাত্রীদের বিশেষ সুযোগ <br>
+                    ✅ এতিম ছাত্র ছাত্রীদের সম্পূর্ণ বিনামূল্যে শিক্ষা <br>
+                    ✅ আরবী/হিন্দি/কম্পিউটার শিক্ষার উপর বিশেষ নজরদারি <br> 
+                    <br>
+                    🎯 আমাদের লক্ষ্য: <br>
+                    “শিক্ষা, শৃঙ্খলা ও মানবিকতায় গড়ে তোলা এক আলোকিত প্রজন্ম।”
                 </p>
             </div>
-            <div class="md:w-1/2 flex justify-center">
+            <!-- <div class="md:w-1/2 flex justify-center">
                 <img src="./Images/Campus Building.jpg" alt="Campus Building"
                     class="rounded shadow-lg w-full max-w-xs md:max-w-md object-cover" />
-            </div>
+            </div> -->
 
             <section class="bg-yellow-50 rounded-lg shadow-md mx-6 md:mx-20 mt-1 py-6">
                 <h2 class="text-center text-2xl font-bold text-yellow-800 mb-3">
@@ -277,7 +289,7 @@
                 </div>
                 <button
                     class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-lg transition duration-300">
-                    <a href="https://www.facebook.com/share/1AV9rPmP1Z/" target="_blank" >Admission Now</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK8XcU4WL13we5fJv2L9kfcPpbfLAmb7BohSv0hM1HX_FoJA/viewform?usp=dialog" target="_blank" >Admission Now</a>
                     
                 </button>
 
@@ -319,17 +331,57 @@
         </section>
 
         <!-- Gallery -->
-        <section id="gallery" class="py-10 md:py-16 max-w-7xl mx-auto px-4 md:px-16 bg-white">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Gallery</h2>
-            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-6">
-                <img src="./Images/Gallery1.jpg" alt="Gallery image 1"
-                    class="rounded-xl shadow-lg h-52 md:h-64 w-full sm:w-96 object-cover" />
-                <img src="./Images/Gallery2.jpg" alt="Gallery image 2"
-                    class="rounded-xl shadow-lg h-52 md:h-64 w-full sm:w-96 object-cover" />
-                <img src="./Images/Gallery3.jpg" alt="Gallery image 3"
-                    class="rounded-xl shadow-lg h-52 md:h-64 w-full sm:w-96 object-cover" />
-            </div>
-        </section>
+        <section id="gallery" class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-start px-4 py-10">
+        
+            <!-- Gallery Section -->
+            <section class="w-full md:w-1/2">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Gallery</h2>
+                <div class="relative w-full h-56 sm:h-72 md:h-80 mx-auto rounded-xl shadow-lg overflow-hidden"
+                    id="gallery-slider">
+                    <img src="./Images/Gallery1.jpg" alt="Gallery image 1"
+                        class="gallery-slide active absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700" />
+                    <img src="./Images/Gallery2.jpg" alt="Gallery image 2"
+                        class="gallery-slide absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700" />
+                    <img src="./Images/Description Nabo Diganta.jpg" alt="Gallery image 3"
+                        class="gallery-slide absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700" />
+                </div>
+            </section>
+
+            <!-- Director's Message Section -->
+            <section class="w-full md:w-1/2">
+                <div class="bg-gray-100 border rounded text-center py-4 mb-6">
+                    <span class="text-2xl md:text-3xl font-bold">
+                        <span class="text-orange-500">Founder's</span>
+                        <span class="text-green-600"> Message</span>
+                    </span>
+                </div>
+                <div class="flex justify-center mb-6">
+                    <img src="./Images/Founder.jpg" alt="Founder Photo"
+                        class="w-44 h-44 object-cover rounded-2xl border shadow-lg" />
+                </div>
+                <div class="bg-gray-100 border rounded p-6 text-center">
+                    <p class="text-green-700 text-lg mb-6">
+                        প্রতিটি শিশুর ভেতরেই লুকিয়ে আছে এক একটি নতুন সম্ভাবনা।”
+                        এই বিশ্বাস থেকেই নব দিগন্ত একাডেমি-র পথচলা শুরু। আমাদের লক্ষ্য শুধু পাঠ্যজ্ঞান নয়, বরং শিশুদের মনন, সৃজনশীলতা ও
+                        মূল্যবোধ গঠনের মাধ্যমে তাদের জীবনের প্রথম ভিত্তিটা শক্ত করে তোলা।
+                        
+                        আমরা চাই, শিশুরা এখানে আনন্দের মাধ্যমে শেখার অভ্যাস গড়ে তুলুক — যেন প্রতিদিন স্কুলে আসা তাদের কাছে এক নতুন আনন্দ হয়ে
+                        ওঠে। খেলাধুলা, গল্প, গান, শিল্প ও অনুসন্ধানের মাধ্যমে তারা শেখে — ভালো মানুষ হতে, সাহসী হতে, এবং নিজের স্বপ্নকে বাস্তবে
+                        রূপ দিতে।
+                        
+                        নব দিগন্ত একাডেমি শুধু একটি স্কুল নয়, এটি এক পরিবার — যেখানে ভালোবাসা, যত্ন ও শিক্ষার মাধ্যমে প্রতিটি শিশু তার নিজের
+                        আলো খুঁজে পায়।
+                    </p>
+                    <div class="mb-1">
+                        <span class="text-blue-700 font-bold text-xl">Mr. Sarwar Hossain (Bappa)</span>
+                    </div>
+                    <div>
+                        <span class="text-orange-500 font-bold">Founder</span>
+                    </div>
+                </div>
+            </section>
+            
+            </section>
 
         <!-- Contact -->
         <section id="contact" class="py-10 md:py-16 bg-gray-100 max-w-7xl mx-auto px-4 md:px-16">

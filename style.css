@@ -1,0 +1,15 @@
+ html {
+     scroll-behavior: smooth;
+ }
+
+ /* For Sliding Gallery */
+ .gallery-slide {
+     opacity: 0;
+     z-index: 0;
+ }
+
+ .gallery-slide.active {
+     opacity: 1;
+     z-index: 1;
+     position: relative;
+ }
