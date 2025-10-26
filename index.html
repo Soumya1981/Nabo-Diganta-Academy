@@ -5,470 +5,706 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Nabo Diganta Academy</title>
-        
-        <!-- TailwindCSS CDN -->
+        <link rel="icon" type="image/png" href="Images/Logo.jpg">
+
         <script src="https://cdn.tailwindcss.com"></script>
-        
-        <!-- Boxicons & FontAwesome -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-        <link rel="stylesheet" href="./style.css" />
-        
+        <link rel="stylesheet" href="./style.css">
     </head>
 
-    <body class="font-sans bg-gray-50">
+    <body class="font-sans bg-gray-50 smooth-scroll">
 
-        <!-- Responsive Navigation -->
-        <nav class="fixed top-0 left-0 right-0 bg-white shadow z-50">
-            <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-                <a href="#home" class="flex items-center space-x-2">
-                    <!-- Logo Image -->
-                    <img src="./Images/Logo.jpg" alt="Logo" class="h-8 w-8" />
-                    <!-- Brand Name -->
-                    <!-- <span class="font-extrabold text-yellow-600 text-xl">Nabo Diganta</span> -->
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 bg-white shadow-lg nav-shadow z-50 transition-all duration-300">
+            <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+                <a href="#home" class="flex items-center space-x-3 animate-fadeInDown">
+                    <img src="./Images/Logo.jpg" alt="Logo" class="h-10 w-10 rounded-full shadow-md" />
+                    <span class="font-extrabold text-yellow-600 text-xl hidden sm:block">Nabo Diganta</span>
                 </a>
                 <button id="menu-btn"
-                    class="md:hidden flex items-center px-3 py-2 border rounded text-gray-600 border-yellow-500">
+                    class="md:hidden flex items-center px-3 py-2 border-2 rounded-lg text-gray-600 border-yellow-500 hover:bg-yellow-50 transition">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
-                <div id="menu" class="hidden md:flex gap-6 items-center">
-                    <a href="#home" class="font-semibold hover:text-yellow-500">Home</a>
-                    <a href="#about" class="font-semibold hover:text-yellow-500">About Us</a>
-                    <a href="#faculty" class="font-semibold hover:text-yellow-500">Faculty</a>
-                    <a href="#admissions" class="font-semibold hover:text-yellow-500">Admissions</a>
-                    <a href="#events" class="font-semibold hover:text-yellow-500">Events</a>
-                    <a href="#gallery" class="font-semibold hover:text-yellow-500">Gallery</a>
-                    <a href="#contact" class="font-semibold hover:text-yellow-500">Contact</a>
-                    <a href="#login" class="font-semibold hover:text-yellow-500">Login</a>
+                <div id="menu" class="hidden md:flex gap-6 items-center animate-fadeInDown">
+                    <a href="#home" class="font-semibold hover:text-yellow-500 transition-colors duration-300">Home</a>
+                    <a href="#about" class="font-semibold hover:text-yellow-500 transition-colors duration-300">About
+                        Us</a>
+                    <a href="#faculty"
+                        class="font-semibold hover:text-yellow-500 transition-colors duration-300">Faculty</a>
+                    <a href="#admissions"
+                        class="font-semibold hover:text-yellow-500 transition-colors duration-300">Admissions</a>
+                    <a href="#events"
+                        class="font-semibold hover:text-yellow-500 transition-colors duration-300">Events</a>
+                    <a href="#gallery"
+                        class="font-semibold hover:text-yellow-500 transition-colors duration-300">Gallery</a>
+                    <a href="#contact"
+                        class="font-semibold hover:text-yellow-500 transition-colors duration-300">Contact</a>
+                    <a href="#login"
+                        class="bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition-all duration-300 shadow-md hover:shadow-lg">Login</a>
                 </div>
             </div>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden flex-col bg-white px-4 pb-3">
-                <a href="#home" class="block py-1 font-semibold hover:text-yellow-500">Home</a>
-                <a href="#about" class="block py-1 font-semibold hover:text-yellow-500">About Us</a>
-                <a href="#faculty" class="block py-1 font-semibold hover:text-yellow-500">Faculty</a>
-                <a href="#admissions" class="block py-1 font-semibold hover:text-yellow-500">Admissions</a>
-                <a href="#events" class="block py-1 font-semibold hover:text-yellow-500">Events</a>
-                <a href="#gallery" class="block py-1 font-semibold hover:text-yellow-500">Gallery</a>
-                <a href="#contact" class="block py-1 font-semibold hover:text-yellow-500">Contact</a>
-                <a href="#login" class="block py-1 font-semibold hover:text-yellow-500">Login</a>
+            <div id="mobile-menu" class="md:hidden hidden flex-col bg-white px-4 pb-4 border-t shadow-lg">
+                <a href="#home"
+                    class="block py-3 font-semibold hover:text-yellow-500 hover:pl-2 transition-all">Home</a>
+                <a href="#about" class="block py-3 font-semibold hover:text-yellow-500 hover:pl-2 transition-all">About
+                    Us</a>
+                <a href="#faculty"
+                    class="block py-3 font-semibold hover:text-yellow-500 hover:pl-2 transition-all">Faculty</a>
+                <a href="#admissions"
+                    class="block py-3 font-semibold hover:text-yellow-500 hover:pl-2 transition-all">Admissions</a>
+                <a href="#events"
+                    class="block py-3 font-semibold hover:text-yellow-500 hover:pl-2 transition-all">Events</a>
+                <a href="#gallery"
+                    class="block py-3 font-semibold hover:text-yellow-500 hover:pl-2 transition-all">Gallery</a>
+                <a href="#contact"
+                    class="block py-3 font-semibold hover:text-yellow-500 hover:pl-2 transition-all">Contact</a>
+                <a href="#login" class="block py-3 font-semibold text-yellow-600 hover:pl-2 transition-all">Login</a>
             </div>
         </nav>
 
-        <!-- Home -->
+        <!-- Hero Section -->
         <section id="home"
-            class="pt-24 min-h-[60vh] flex flex-col items-center justify-center relative bg-cover bg-center"
+            class="pt-24 min-h-[70vh] flex flex-col items-center justify-center relative bg-cover bg-center overflow-hidden"
             style="background-image: url('./Images/pexels-caleboquendo-3042432.jpg');">
-            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-            <div class="relative z-10 text-center text-white p-5 max-w-2xl">
-                <h1 class="text-3xl md:text-5xl font-bold mb-4">Welcome to Nabo Diganta Academy</h1>
-                <p class="text-lg md:text-xl mb-6">Empowering young minds for a brighter future.</p>
-                <a href="#login">
-                    <button class="bg-yellow-500 px-6 py-3 rounded font-bold hover:bg-yellow-600 transition">Get
-                        Started</button>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
+            <div class="relative z-10 text-center text-white p-5 max-w-3xl animate-fadeInUp">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Welcome to <span
+                        class="text-yellow-400">Nabo Diganta Academy</span></h1>
+                <p class="text-xl md:text-2xl mb-8 font-light">Empowering young minds for a brighter future.</p>
+                <a href="#admissions">
+                    <button
+                        class="bg-yellow-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-600 transition-all duration-300 shadow-2xl pulse-button">
+                        Enroll Now</button>
                 </a>
             </div>
+            <div class="absolute bottom-10 animate-bounce">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
         </section>
-        
+
         <!-- News Ticker -->
-        <div class="bg-gray-600 text-white py-2 overflow-hidden">
-            <div id="news-ticker" class="whitespace-nowrap flex gap-10 px-4">
-                <span>📰 Admissions open for 2026</span>
-                <span>🧑‍🏫 New computer lab inaugurated</span>
-                <span>🎓 Annual function on 25th December</span>
-                <span>🚌 School bus service extended to nearby towns</span>
+        <div class="bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 text-white py-3 overflow-hidden">
+            <div class="flex gap-20 ticker-content whitespace-nowrap px-4">
+                <span class="flex items-center gap-2"><i class="fas fa-newspaper"></i> Admissions open for 2026</span>
+                <span class="flex items-center gap-2"><i class="fas fa-computer"></i> New computer lab
+                    inaugurated</span>
+                <span class="flex items-center gap-2"><i class="fas fa-graduation-cap"></i> Annual function on 25th
+                    December</span>
+                <span class="flex items-center gap-2"><i class="fas fa-bus"></i> School bus service extended to nearby
+                    towns</span>
+                <span class="flex items-center gap-2"><i class="fas fa-newspaper"></i> Admissions open for 2026</span>
+                <span class="flex items-center gap-2"><i class="fas fa-computer"></i> New computer lab
+                    inaugurated</span>
+                <span class="flex items-center gap-2"><i class="fas fa-graduation-cap"></i> Annual function on 25th
+                    December</span>
+                <span class="flex items-center gap-2"><i class="fas fa-bus"></i> School bus service extended to nearby
+                    towns</span>
             </div>
         </div>
 
-        <!-- About -->
-        <section id="about"
-            class="bg-cover bg-center bg-opacity-10 flex flex-col md:flex-row items-center py-10 md:py-16 px-4 md:px-16 bg-white max-w-7xl mx-auto gap-8" 
-            style="background-image: url('./Images/Campus\ Building.jpg');">
-            <div class="md:w-1/2 bg-yellow-50 rounded-lg">
-                <h2 class="text-2xl md:text-4xl font-bold mb-6">About Nabo Diganta Academy</h2>
-                <p class="text-base md:text-lg text-gray-700">
-                    "নতুন প্রজন্মের নতুন দিগন্ত" <br>
-                    
-                    📚 Admission Open – 2025 <br>
-                    ভর্তি চলছে Nursery থেকে Class V পর্যন্ত! <br>
-                    <br>
-                    🌟 আমাদের বিশেষত্বঃ <br>
-                    ✅ অভিজ্ঞ ও যত্নশীল শিক্ষক/শিক্ষিকা বৃন্দ <br>
-                    ✅ স্মার্ট ক্লাসরুম ও আধুনিক শিক্ষাব্যবস্থা <br>
-                    ✅ খেলাধুলা, সাংস্কৃতিক কার্যক্রম ও নৈতিক শিক্ষা <br>
-                    ✅ নিয়মিত গার্ডিয়ান মিটিং ও প্রগ্রেস রিপোর্ট <br>
-                    ✅ পরিচ্ছন্ন ও নিরাপদ পরিবেশ <br>
-                    ✅ সিসি টিভির আওতাধীন নিজস্ব সুবিশাল কম্পাউন্ড <br>
-                    ✅ দুস্থ মেধাবী ছাত্র ছাত্রীদের বিশেষ সুযোগ <br>
-                    ✅ এতিম ছাত্র ছাত্রীদের সম্পূর্ণ বিনামূল্যে শিক্ষা <br>
-                    ✅ আরবী/হিন্দি/কম্পিউটার শিক্ষার উপর বিশেষ নজরদারি <br> 
-                    <br>
-                    🎯 আমাদের লক্ষ্য: <br>
-                    “শিক্ষা, শৃঙ্খলা ও মানবিকতায় গড়ে তোলা এক আলোকিত প্রজন্ম।”
-                </p>
-            </div>
-            <!-- <div class="md:w-1/2 flex justify-center">
-                <img src="./Images/Campus Building.jpg" alt="Campus Building"
-                    class="rounded shadow-lg w-full max-w-xs md:max-w-md object-cover" />
-            </div> -->
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 px-4 md:px-16 bg-gradient-to-b from-white to-gray-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2 scroll-reveal">
+                        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 shadow-xl hover-lift">
+                            <h2 class="text-3xl md:text-5xl font-bold mb-6 gradient-text">About Nabo Diganta Academy
+                            </h2>
+                            <div class="space-y-4 text-gray-800 text-base md:text-lg leading-relaxed">
+                                <p class="font-semibold text-xl">"নতুন প্রজন্মের নতুন দিগন্ত"</p>
+                                <p><span class="text-yellow-600 font-bold">📚 Admission Open – 2025</span><br>
+                                    ভর্তি চলছে Nursery থেকে Class V পর্যন্ত!</p>
 
-            <section class="bg-yellow-50 rounded-lg shadow-md mx-6 md:mx-20 mt-1 py-6">
-                <h2 class="text-center text-2xl font-bold text-yellow-800 mb-3">
-                    📰 Latest News
+                                <div class="bg-white rounded-lg p-4 shadow-md">
+                                    <p class="font-bold text-xl mb-3 text-yellow-700">🌟 আমাদের বিশেষত্বঃ</p>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start gap-2">✅ অভিজ্ঞ ও যত্নশীল শিক্ষক/শিক্ষিকা বৃন্দ</li>
+                                        <li class="flex items-start gap-2">✅ স্মার্ট ক্লাসরুম ও আধুনিক শিক্ষাব্যবস্থা
+                                        </li>
+                                        <li class="flex items-start gap-2">✅ খেলাধুলা, সাংস্কৃতিক কার্যক্রম ও নৈতিক
+                                            শিক্ষা</li>
+                                        <li class="flex items-start gap-2">✅ নিয়মিত গার্ডিয়ান মিটিং ও প্রগ্রেস রিপোর্ট
+                                        </li>
+                                        <li class="flex items-start gap-2">✅ পরিচ্ছন্ন ও নিরাপদ পরিবেশ</li>
+                                        <li class="flex items-start gap-2">✅ সিসি টিভির আওতাধীন নিজস্ব সুবিশাল কম্পাউন্ড
+                                        </li>
+                                        <li class="flex items-start gap-2">✅ দুস্থ মেধাবী ছাত্র ছাত্রীদের বিশেষ সুযোগ
+                                        </li>
+                                        <li class="flex items-start gap-2">✅ এতিম ছাত্র ছাত্রীদের সম্পূর্ণ বিনামূল্যে
+                                            শিক্ষা</li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-yellow-100 rounded-lg p-4 border-l-4 border-yellow-600">
+                                    <p class="font-bold text-lg mb-2">🎯 আমাদের লক্ষ্য:</p>
+                                    <p class="italic">"শিক্ষা, শৃঙ্খলা ও মানবিকতায় গড়ে তোলা এক আলোকিত প্রজন্ম।"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 scroll-reveal">
+                        <div class="bg-gradient-to-br from-yellow-50 to-white rounded-2xl shadow-2xl p-8 hover-lift">
+                            <h2 class="text-center text-3xl font-bold text-yellow-800 mb-6">📰 Latest News</h2>
+                            <div id="news-container" class="space-y-4">
+                                <div
+                                    class="bg-white rounded-lg p-4 shadow-md border-l-4 border-yellow-500 hover:shadow-lg transition">
+                                    <p class="flex items-center gap-2"><i
+                                            class="fas fa-graduation-cap text-yellow-600"></i> Admission Open for
+                                        2025-26 Academic Year!</p>
+                                </div>
+                                <div
+                                    class="bg-white rounded-lg p-4 shadow-md border-l-4 border-green-500 hover:shadow-lg transition">
+                                    <p class="flex items-center gap-2"><i class="fas fa-trophy text-green-600"></i> Our
+                                        students won the District Science Fair!</p>
+                                </div>
+                                <div
+                                    class="bg-white rounded-lg p-4 shadow-md border-l-4 border-blue-500 hover:shadow-lg transition">
+                                    <p class="flex items-center gap-2"><i class="fas fa-users text-blue-600"></i>
+                                        Parent-Teacher Meeting scheduled for October 15th.</p>
+                                </div>
+                                <div
+                                    class="bg-white rounded-lg p-4 shadow-md border-l-4 border-red-500 hover:shadow-lg transition">
+                                    <p class="flex items-center gap-2"><i class="fas fa-heartbeat text-red-600"></i>
+                                        Free Health Checkup Camp on October 20th.</p>
+                                </div>
+                                <div
+                                    class="bg-white rounded-lg p-4 shadow-md border-l-4 border-purple-500 hover:shadow-lg transition">
+                                    <p class="flex items-center gap-2"><i class="fas fa-book text-purple-600"></i>
+                                        Mid-term Exams start from November 5th.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty Section -->
+        <section id="faculty" class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 md:px-16">
+                <h2 class="text-3xl md:text-5xl text-center font-bold mb-16 scroll-reveal">
+                    <span class="gradient-text">Meet Our Faculty</span>
                 </h2>
-            
-                <div id="news-container" class="h-32 overflow-hidden text-center text-lg font-medium text-gray-700 space-y-2">
-                    <div id="news-content">
-                        <p>🎓 Admission Open for 2025-26 Academic Year!</p>
-                        <p>🏆 Our students won the District Science Fair!</p>
-                        <p>📢 Parent-Teacher Meeting scheduled for October 15th.</p>
-                        <p>🩺 Free Health Checkup Camp on October 20th.</p>
-                        <p>📚 Mid-term Exams start from November 5th.</p>
-                        <p>🎨 Annual Art Exhibition coming soon!</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="faculty-grid">
+                    <!-- Faculty Card 1 -->
+                    <div class="faculty-card bg-white rounded-2xl shadow-xl p-8 text-center hover-lift scroll-reveal">
+                        <div class="relative inline-block mb-6">
+                            <img src="./Images/Salauddin Mandal.jpg" alt="Salauddin Mandal"
+                                class="rounded-full mx-auto h-40 w-40 object-cover border-4 border-yellow-400 shadow-lg" />
+                            <div
+                                class="absolute -bottom-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                Principal</div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Salauddin Mandal</h3>
+                        <p class="text-gray-700 font-semibold">Geography</p>
+                        <p class="text-gray-500 text-sm">B.A, M.A, B.Ed</p>
+                    </div>
+
+                    <!-- Faculty Card 2 -->
+                    <div class="faculty-card bg-white rounded-2xl shadow-xl p-8 text-center hover-lift scroll-reveal">
+                        <div class="relative inline-block mb-6">
+                            <img src="./Images/Azizur Rahaman.jpg" alt="Azizur Rahaman"
+                                class="rounded-full mx-auto h-40 w-40 object-cover border-4 border-yellow-400 shadow-lg" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Azizur Rahaman</h3>
+                        <p class="text-gray-700 font-semibold">Accountent</p>
+                        <p class="text-gray-500 text-sm">B.A</p>
+                    </div>
+
+                    <!-- Faculty Card 3 -->
+                    <div class="faculty-card bg-white rounded-2xl shadow-xl p-8 text-center hover-lift scroll-reveal">
+                        <div class="relative inline-block mb-6">
+                            <img src="./Images/Runa Laila.jpg" alt="Runa Laila"
+                                class="rounded-full mx-auto h-40 w-40 object-cover border-4 border-yellow-400 shadow-lg" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Runa Laila</h3>
+                        <p class="text-gray-700 font-semibold">Bengali</p>
+                        <p class="text-gray-500 text-sm">B.A, Computer Diploma</p>
+                    </div>
+
+                    <!-- Hidden Faculty Cards -->
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Samim Akhtar.jpg" alt="Samim Akhtar"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Samim Akhtar</h3>
+                        <p class="text-gray-700 font-semibold">History</p>
+                        <p class="text-gray-500 text-sm">B.A, M.A, B.Ed</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Mamoni Khatun.jpg" alt="Mamoni Khatun"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Mamoni Khatun</h3>
+                        <p class="text-gray-700 font-semibold">Bengali</p>
+                        <p class="text-gray-500 text-sm">B.A, Computer Diploma</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Soheli Biswas.jpg" alt="Soheli Biswas"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Soheli Biswas</h3>
+                        <p class="text-gray-700 font-semibold">English</p>
+                        <p class="text-gray-500 text-sm">B.A, D.Ed</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Sabir Ahmed.jpg" alt="Sabir Ahmed"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Sabir Ahmed</h3>
+                        <p class="text-gray-700 font-semibold">Mathematics</p>
+                        <p class="text-gray-500 text-sm">B.Sc, M.Sc, D.Ed, B.Ed</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Monalisa Akther Banu.jpg" alt="Monalisa Akther Banu"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Monalisa Akter Banu</h3>
+                        <p class="text-gray-700 font-semibold">Education</p>
+                        <p class="text-gray-500 text-sm">B.A, M.A, B.Ed</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Erina Khatun.jpg" alt="Erina Khatun"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Erina Khatun</h3>
+                        <p class="text-gray-700 font-semibold">Bengali</p>
+                        <p class="text-gray-500 text-sm">B.A</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Faruk Ahamed.jpg" alt="Faruk Ahamed"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Faruk Ahamed</h3>
+                        <p class="text-gray-700 font-semibold">Education</p>
+                        <p class="text-gray-500 text-sm">B.A, M.A, B.Ed</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Safiul Ansary.jpg" alt="Safiul Ansary"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Safiul Ansary</h3>
+                        <p class="text-gray-700 font-semibold">History</p>
+                        <p class="text-gray-500 text-sm">B.A, M.A, D.Ed</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Debika Sultana.jpg" alt="Debika Sultana"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Debika Sultana</h3>
+                        <p class="text-gray-700 font-semibold">General</p>
+                        <p class="text-gray-500 text-sm">B.A</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Mahabul Islam.jpg" alt="Mahabul Islam"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Mahabul Hoque</h3>
+                        <p class="text-gray-700 font-semibold">Theology</p>
+                        <p class="text-gray-500 text-sm">B.A, M.A, B.Ed</p>
+                    </div>
+
+                    <div class="faculty-card hidden bg-white rounded-2xl shadow-xl p-8 text-center hover-lift">
+                        <img src="./Images/Hafija Parvin.jpg" alt="Hafija Parvin"
+                            class="rounded-full mx-auto h-40 w-40 object-cover mb-4 border-4 border-yellow-400 shadow-lg" />
+                        <h3 class="text-2xl font-bold mb-2">Hafija Parvin</h3>
+                        <p class="text-gray-700 font-semibold">Bengali</p>
+                        <p class="text-gray-500 text-sm">B.A</p>
                     </div>
                 </div>
-            </section>
 
-        </section>
-
-        <!-- Faculty -->
-        <section id="faculty" class="py-10 md:py-16 bg-gray-100 max-w-7xl mx-auto px-4 md:px-16">
-            <h2 class="text-2xl md:text-3xl text-center font-bold mb-12">Meet Our Faculty</h2>
-            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
-                <div
-                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center hover:shadow-yellow-400 transition-shadow duration-300">
-                    <img src="./Images/Salauddin Mandal.jpg" alt="Salauddin Mandal"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Salauddin Mandal</h3>
-                    <p class="text-red-600">Principal</p>
-                    <p class="text-gray-800">Geography</p>
-                    <p class="text-gray-600">B.A, M.A, B.Ed</p>
-                </div>
-                <div
-                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center hover:shadow-yellow-400 transition-shadow duration-300">
-                    <img src="./Images/Runa Laila.jpg" alt="Runa Laila"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Runa Laila</h3>
-                    <p class="text-gray-800">Bengali</p>
-                    <p class="text-gray-600">B.A, Computer Diploma</p>
-                </div>
-                <div
-                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center hover:shadow-yellow-400 transition-shadow duration-300">
-                    <img src="01.09.2025_00.24.18_REC.jpg" alt="Sohel Rana"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Sohel Rana</h3>
-                    <p class="text-gray-800">Mathematics</p>
-                    <p class="text-gray-600">B.Sc, M.Sc, D.Ed, B.Ed</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Samim Akhtar.jpg" alt="Samim Akhtar"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Samim Akhtar</h3>
-                    <p class="text-gray-800">History</p>
-                    <p class="text-gray-600">B.A, M.A, B.Ed</p>
-                </div>
-
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="01.09.2025_00.25.14_REC.jpg" alt="Sk Md Tarik Aziz"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Sk Md Tarik Aziz</h3>
-                    <p class="text-gray-800">English</p>
-                    <p class="text-gray-600">B.A, B.Ed</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Mamoni Khatun.jpg" alt="Mamoni Khatun"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Mamoni Khatun</h3>
-                    <p class="text-gray-800">Bengali</p>
-                    <p class="text-gray-600">B.A, Computer Diploma</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Soheli Biswas.jpg" alt="Soheli Biswas"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Soheli Biswas</h3>
-                    <p class="text-gray-800">English</p>
-                    <p class="text-gray-600">B.A, D.Ed</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Azizur Rahaman.jpg" alt="Azizur Rahaman"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Azizur Rahaman</h3>
-                    <p class="text-gray-800">Accountent</p>
-                    <p class="text-gray-600">B.A</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Monalisa Akther Banu.jpg" alt="Monalisa Akther Banu"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Monalisa Akter Banu</h3>
-                    <p class="text-gray-800">Education</p>
-                    <p class="text-gray-600">B.A, M.A, B.Ed</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Erina Khatun.jpg" alt="Erina Khatun"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Erina Khatun</h3>
-                    <p class="text-gray-800">Bengali</p>
-                    <p class="text-gray-600">B.A</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Faruk Ahamed.jpg" alt="Faruk Ahamed"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Faruk Ahamed</h3>
-                    <p class="text-gray-800">Education</p>
-                    <p class="text-gray-600">B.A, M.A, B.Ed</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Safiul Ansary.jpg" alt="Safiul Ansary"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Safiul Ansary</h3>
-                    <p class="text-gray-800">History</p>
-                    <p class="text-gray-600">B.A, M.A, D.Ed</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Debika Sultana.jpg" alt="Debika Sultana"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Debika Sultana</h3>
-                    <p class="text-gray-800">Genarel</p>
-                    <p class="text-gray-600">B.A</p>
-                </div>
-                <div class="faculty-card hidden bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 text-center">
-                    <img src="./Images/Mahabul Islam.jpg" alt="Mahabul Islam"
-                        class="rounded-full mx-auto h-32 w-32 md:h-40 md:w-40 object-cover mb-4 border-4 border-yellow-400" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-1">Mahabul Islam</h3>
-                    <p class="text-gray-800">Theology</p>
-                    <p class="text-gray-600">B.A,M.A,B.ED</p>
-                </div>
-            </div>
-
-            <div class="flex justify-center mt-8">
-                <button id="see-more-btn"
-                    class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded shadow transition">
-                    See More
-                </button>
-                <button id="show-less-btn"
-                    class="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded shadow transition hidden">
-                    Show Less
-                </button>
-            </div>
-        </section>
-
-        <!-- Admissions -->
-        <section id="admissions" class="py-10 md:py-16 max-w-7xl mx-auto px-4 md:px-16 bg-white">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Admissions Open</h2>
-            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
-                <div
-                    class="bg-gray-100 rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
-                    <img src="./Images/Professional Training.jpg" alt="Professional Training"
-                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-2">Professional Training</h3>
-                    <p class="text-gray-700">
-                        Unlock your potential with our career-focused programs.
-                    </p>
-                </div>
-                <div
-                    class="bg-gray-100 rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
-                    <img src="./Images/Modern Infrastructure.jpg" alt="Modern Infrastructure"
-                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-2">Modern Infrastructure</h3>
-                    <p class="text-gray-700">
-                        Experience state-of-the-art facilities and learning tools.
-                    </p>
-                </div>
-                <div
-                    class="bg-gray-100 rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
-                    <img src="./Images/Hands-on Learning.jpg" alt="Hands-on Learning"
-                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-2">Hands-on Learning</h3>
-                    <p class="text-gray-700">
-                        Apply your knowledge through practical experiences.
-                    </p>
-                </div>
-                <button
-                    class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-lg transition duration-300">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK8XcU4WL13we5fJv2L9kfcPpbfLAmb7BohSv0hM1HX_FoJA/viewform?usp=dialog" target="_blank" >Admission Now</a>
-                    
-                </button>
-
-            </div>
-        </section>
-
-        <!-- Events -->
-        <section id="events" class="py-10 md:py-16 bg-gray-100 max-w-7xl mx-auto px-4 md:px-16">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Upcoming Events</h2>
-            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
-                <div
-                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
-                    <img src="./Images/Professional Showcase.jpg" alt="Professional Showcase"
-                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-2">Professional Showcase</h3>
-                    <p class="text-gray-700">
-                        Learn about our professional training programs at this exclusive event.
-                    </p>
-                </div>
-                <div
-                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
-                    <img src="./Images/Innovation Drive.jpg" alt="Innovation Drive"
-                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-2">Innovation Drive</h3>
-                    <p class="text-gray-700">
-                        Witness groundbreaking creativity and innovation at this event.
-                    </p>
-                </div>
-                <div
-                    class="bg-white rounded-xl shadow-lg p-8 w-full sm:w-80 hover:shadow-yellow-400 transition-shadow duration-300">
-                    <img src="./Images/Hands-on Learning.jpg" alt="Hands-on Workshop"
-                        class="h-32 md:h-40 w-full object-cover rounded mb-4" />
-                    <h3 class="text-lg md:text-2xl font-bold mb-2">Hands-on Workshop</h3>
-                    <p class="text-gray-700">
-                        Engage in practical learning experiences at our interactive workshop.
-                    </p>
+                <div class="flex justify-center mt-12 gap-4">
+                    <button id="see-more-btn"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                        See More <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                    <button id="show-less-btn"
+                        class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hidden">
+                        Show Less <i class="fas fa-chevron-up ml-2"></i>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Gallery -->
-        <section id="gallery" class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-start px-4 py-10">
+        <!-- Admissions Section -->
+        <section id="admissions" class="py-16 md:py-24 bg-gradient-to-b from-white to-yellow-50">
+            <div class="max-w-7xl mx-auto px-4 md:px-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 scroll-reveal gradient-text">Admissions Open
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 hover-lift scroll-reveal overflow-hidden group">
+                        <div class="overflow-hidden rounded-xl mb-6">
+                            <img src="./Images/Professional Training.jpg" alt="Professional Training"
+                                class="h-48 w-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Professional Training</h3>
+                        <p class="text-gray-600">Unlock your potential with our career-focused programs.</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-8 hover-lift scroll-reveal overflow-hidden group">
+                        <div class="overflow-hidden rounded-xl mb-6">
+                            <img src="./Images/Modern Infrastructure.jpg" alt="Modern Infrastructure"
+                                class="h-48 w-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Modern Infrastructure</h3>
+                        <p class="text-gray-600">Experience state-of-the-art facilities and learning tools.</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-8 hover-lift scroll-reveal overflow-hidden group">
+                        <div class="overflow-hidden rounded-xl mb-6">
+                            <img src="./Images/Hands-on Learning.jpg" alt="Hands-on Learning"
+                                class="h-48 w-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Hands-on Learning</h3>
+                        <p class="text-gray-600">Apply your knowledge through practical experiences.</p>
+                    </div>
+                </div>
+
+                <div class="text-center scroll-reveal">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK8XcU4WL13we5fJv2L9kfcPpbfLAmb7BohSv0hM1HX_FoJA/viewform?usp=dialog"
+                        target="_blank">
+                        <button
+                            class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 pulse-button text-lg">
+                            <i class="fas fa-graduation-cap mr-2"></i> Apply for Admission Now
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="py-16 md:py-24 bg-gradient-to-b from-yellow-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 md:px-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 scroll-reveal gradient-text">Upcoming Events
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 hover-lift scroll-reveal overflow-hidden group">
+                        <div class="overflow-hidden rounded-xl mb-6">
+                            <img src="./Images/Professional Showcase.jpg" alt="Professional Showcase"
+                                class="h-48 w-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <div class="flex items-center gap-2 text-yellow-600 mb-3">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span class="font-semibold">Coming Soon</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Professional Showcase</h3>
+                        <p class="text-gray-600">Learn about our professional training programs at this exclusive event.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-8 hover-lift scroll-reveal overflow-hidden group">
+                        <div class="overflow-hidden rounded-xl mb-6">
+                            <img src="./Images/Innovation Drive.jpg" alt="Innovation Drive"
+                                class="h-48 w-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <div class="flex items-center gap-2 text-yellow-600 mb-3">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span class="font-semibold">Coming Soon</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Innovation Drive</h3>
+                        <p class="text-gray-600">Witness groundbreaking creativity and innovation at this event.</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-8 hover-lift scroll-reveal overflow-hidden group">
+                        <div class="overflow-hidden rounded-xl mb-6">
+                            <img src="./Images/Hands-on Learning.jpg" alt="Hands-on Workshop"
+                                class="h-48 w-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <div class="flex items-center gap-2 text-yellow-600 mb-3">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span class="font-semibold">Coming Soon</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Hands-on Workshop</h3>
+                        <p class="text-gray-600">Engage in practical learning experiences at our interactive workshop.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Founder's Message -->
+        <section id="Founder's_Message" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="scroll-reveal">
+            <div class="bg-gradient-to-r from-orange-500 to-green-600 rounded-2xl text-center py-6 mb-8 shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Founder's Message</h2>
+            </div>
         
-            <!-- Gallery Section -->
-            <section class="w-full md:w-1/2">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Gallery</h2>
-                <div class="relative w-full h-56 sm:h-72 md:h-80 mx-auto rounded-xl shadow-lg overflow-hidden"
-                    id="gallery-slider">
-                    <img src="./Images/Gallery1.jpg" alt="Gallery image 1"
-                        class="gallery-slide active absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700" />
-                    <img src="./Images/Gallery2.jpg" alt="Gallery image 2"
-                        class="gallery-slide absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700" />
-                    <img src="./Images/Description Nabo Diganta.jpg" alt="Gallery image 3"
-                        class="gallery-slide absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-700" />
+            <div class="flex justify-center mb-8">
+                <div class="relative">
+                    <img src="./Images/Founder.jpg" alt="Founder"
+                        class="w-48 h-48 object-cover rounded-full border-8 border-yellow-400 shadow-2xl" />
+                    <div
+                        class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-white px-6 py-2 rounded-full font-bold shadow-lg">
+                        Founder
+                    </div>
                 </div>
+            </div>
+        
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-xl border-t-4 border-yellow-500">
+                <p class="text-green-700 text-lg leading-relaxed mb-6 text-justify">
+                    "প্রতিটি শিশুর ভেতরেই লুকিয়ে আছে এক একটি নতুন সম্ভাবনা।" এই বিশ্বাস থেকেই নব দিগন্ত
+                    একাডেমি-র পথচলা শুরু।
+                    আমাদের লক্ষ্য শুধু পাঠ্যজ্ঞান নয়, বরং শিশুদের মনন, সৃজনশীলতা ও মূল্যবোধ গঠনের মাধ্যমে
+                    তাদের জীবনের প্রথম
+                    ভিত্তিটা শক্ত করে তোলা।
+                </p>
+                <p class="text-gray-700 text-base leading-relaxed mb-6 text-justify">
+                    আমরা চাই, শিশুরা এখানে আনন্দের মাধ্যমে শেখার অভ্যাস গড়ে তুলুক — যেন প্রতিদিন স্কুলে আসা
+                    তাদের কাছে এক নতুন
+                    আনন্দ হয়ে ওঠে। খেলাধুলা, গল্প, গান, শিল্প ও অনুসন্ধানের মাধ্যমে তারা শেখে — ভালো মানুষ
+                    হতে, সাহসী হতে,
+                    এবং নিজের স্বপ্নকে বাস্তবে রূপ দিতে।
+                </p>
+                <p class="text-gray-700 text-base leading-relaxed mb-6 text-justify italic">
+                    নব দিগন্ত একাডেমি শুধু একটি স্কুল নয়, এটি এক পরিবার — যেখানে ভালোবাসা, যত্ন ও শিক্ষার
+                    মাধ্যমে প্রতিটি
+                    শিশু তার নিজের আলো খুঁজে পায়।
+                </p>
+                <div class="text-center pt-4 border-t-2 border-gray-200">
+                    <p class="text-blue-700 font-bold text-xl mb-1">Mr. Sarwar Hossain (Bappa)</p>
+                    <p class="text-orange-600 font-semibold">Founder, Nabo Diganta Academy</p>
+                </div>
+            </div>
             </section>
 
-            <!-- Director's Message Section -->
-            <section class="w-full md:w-1/2">
-                <div class="bg-gray-100 border rounded text-center py-4 mb-6">
-                    <span class="text-2xl md:text-3xl font-bold">
-                        <span class="text-orange-500">Founder's</span>
-                        <span class="text-green-600"> Message</span>
-                    </span>
-                </div>
-                <div class="flex justify-center mb-6">
-                    <img src="./Images/Founder.jpg" alt="Founder Photo"
-                        class="w-44 h-44 object-cover rounded-2xl border shadow-lg" />
-                </div>
-                <div class="bg-gray-100 border rounded p-6 text-center">
-                    <p class="text-green-700 text-lg mb-6">
-                        প্রতিটি শিশুর ভেতরেই লুকিয়ে আছে এক একটি নতুন সম্ভাবনা।”
-                        এই বিশ্বাস থেকেই নব দিগন্ত একাডেমি-র পথচলা শুরু। আমাদের লক্ষ্য শুধু পাঠ্যজ্ঞান নয়, বরং শিশুদের মনন, সৃজনশীলতা ও
-                        মূল্যবোধ গঠনের মাধ্যমে তাদের জীবনের প্রথম ভিত্তিটা শক্ত করে তোলা।
-                        
-                        আমরা চাই, শিশুরা এখানে আনন্দের মাধ্যমে শেখার অভ্যাস গড়ে তুলুক — যেন প্রতিদিন স্কুলে আসা তাদের কাছে এক নতুন আনন্দ হয়ে
-                        ওঠে। খেলাধুলা, গল্প, গান, শিল্প ও অনুসন্ধানের মাধ্যমে তারা শেখে — ভালো মানুষ হতে, সাহসী হতে, এবং নিজের স্বপ্নকে বাস্তবে
-                        রূপ দিতে।
-                        
-                        নব দিগন্ত একাডেমি শুধু একটি স্কুল নয়, এটি এক পরিবার — যেখানে ভালোবাসা, যত্ন ও শিক্ষার মাধ্যমে প্রতিটি শিশু তার নিজের
-                        আলো খুঁজে পায়।
-                    </p>
-                    <div class="mb-1">
-                        <span class="text-blue-700 font-bold text-xl">Mr. Sarwar Hossain (Bappa)</span>
-                    </div>
-                    <div>
-                        <span class="text-orange-500 font-bold">Founder</span>
-                    </div>
-                </div>
-            </section>
             
-            </section>
+        <!-- Gallery -->
+        <section id="gallery" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+            <div class="max-w-3xl mx-auto px-4 md:px-16">
+                <div class="grid grid-cols-1 gap-12">
+                    <!-- Gallery -->
+                    <div class="scroll-reveal">
+                        <h2 class="text-3xl md:text-5xl font-bold text-center mb-8 gradient-text">Gallery</h2>
+                        <div class="relative w-full h-96 rounded-2xl shadow-2xl overflow-hidden group"
+                            id="gallery-slider">
+                            <img src="./Images/Gallery1.jpg" alt="Gallery 1"
+                                class="gallery-slide active absolute inset-0 w-full h-full object-cover transition-opacity duration-1000" />
+                            <img src="./Images/Gallery2.jpg" alt="Gallery 2"
+                                class="gallery-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+                            <img src="./Images/Gallery3.jpg" alt="Gallery 3"
+                                class="gallery-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+                            <img src="./Images/Banner.jpg" alt="Gallery 4"
+                                class="gallery-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
 
-        <!-- Contact -->
-        <section id="contact" class="py-10 md:py-16 bg-gray-100 max-w-7xl mx-auto px-4 md:px-16">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Contact Us</h2>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-4xl mx-auto">
-                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="School Building"
-                        class="rounded-xl shadow-lg h-44 md:h-56 w-full sm:w-80 object-cover" />
-                    <div class="text-center md:text-left">
-                        <p><i class="fa-solid fa-location-dot text-blue-700 mr-2"></i>Aminabad,Domkal, Murshidabad, West Bengal, India, 742406</p>
-                        <p><i class="fa-solid fa-phone text-blue-700 mr-2"></i>+91 8918051055</p>
-                        <p><i class="fa-solid fa-phone text-blue-700 mr-2"></i>+91 9064431499</p>
-                        <p><i class="fa-solid fa-phone text-blue-700 mr-2"></i>+91 9593529632</p>
-                        <p><i class="fa-solid fa-envelope text-blue-700 mr-2"></i>contact@nabodiganta.org</p>
+                            <!-- Navigation Dots -->
+                            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
+                                <button
+                                    class="gallery-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition"
+                                    data-index="0"></button>
+                                <button
+                                    class="gallery-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition"
+                                    data-index="1"></button>
+                                <button
+                                    class="gallery-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition"
+                                    data-index="2"></button>
+                                <button 
+                                    class="gallery-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition"
+                                    data-index="2"></button>
+                            </div>
+
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                                <button onclick="openModal()"
+                                    class="opacity-0 group-hover:opacity-100 bg-white text-gray-800 px-6 py-3 rounded-full font-bold transform scale-90 group-hover:scale-100 transition-all duration-300">
+                                    <i class="fas fa-expand mr-2"></i> View Full Screen
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div id="galleryModal"
+                            class="fixed inset-0 z-50 bg-black/95 flex items-center justify-center hidden">
+                            <button onclick="closeModal()"
+                                class="absolute top-8 right-8 text-white text-4xl font-bold hover:text-yellow-400 transition z-50">&times;</button>
+                            <button onclick="prevImg()"
+                                class="absolute left-8 text-white text-4xl font-bold hover:text-yellow-400 transition top-1/2 transform -translate-y-1/2 z-50">&larr;</button>
+                            <button onclick="nextImg()"
+                                class="absolute right-8 text-white text-4xl font-bold hover:text-yellow-400 transition top-1/2 transform -translate-y-1/2 z-50">&rarr;</button>
+                            <img id="modalImg"
+                                class="max-w-5xl max-h-[90vh] w-auto h-auto object-contain rounded-xl shadow-2xl" />
+                        </div>
+                    </div>
+                    
                     </div>
                 </div>
-            <!-- <form class="max-w-xl mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                <label for="name" class="block font-semibold mb-1">Full Name</label>
-                <input id="name" type="text" placeholder="Your Full Name"
-                    class="w-full mb-4 px-4 py-3 border rounded focus:outline-yellow-400" />
-                <label for="email" class="block font-semibold mb-1">Email Address</label>
-                <input id="email" type="email" placeholder="Your Email"
-                    class="w-full mb-4 px-4 py-3 border rounded focus:outline-yellow-400" />
-                <label for="message" class="block font-semibold mb-1">Message</label>
-                <textarea id="message" rows="4" placeholder="Your Message"
-                    class="w-full mb-4 px-4 py-3 border rounded focus:outline-yellow-400"></textarea>
-                <button type="submit"
-                    class="bg-yellow-500 text-white font-bold px-6 py-3 rounded hover:bg-yellow-600 transition w-full">Send</button>
-            </form> -->
+            </div>
         </section>
 
-        <!-- Floating Login Modal -->
-        <div id="login-modal-bg" class="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center hidden">
-            <div class="bg-white p-6 md:p-10 rounded-xl shadow-2xl w-full max-w-xs md:max-w-md">
-                <h2 class="text-xl md:text-2xl font-bold text-center mb-6">Login to Your Account</h2>
-                <form>
-                    <label for="loginEmail" class="block mb-2 font-semibold">Email Address</label>
-                    <input id="loginEmail" type="email" placeholder="Email Address" required
-                        class="w-full mb-3 px-4 py-3 border rounded focus:outline-yellow-400" />
-                    <label for="loginPassword" class="block mb-2 font-semibold">Password</label>
-                    <input id="loginPassword" type="password" placeholder="Password" required
-                        class="w-full mb-3 px-4 py-3 border rounded focus:outline-yellow-400" />
-                    <div class="flex flex-col sm:flex-row items-center justify-between mb-5 gap-2">
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox" />
-                            Remember me
-                        </label>
-                        <a href="#" class="text-yellow-500 hover:underline text-sm">Forgot password?</a>
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 md:px-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 scroll-reveal gradient-text">Contact Us</h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="scroll-reveal">
+                        <div class="overflow-hidden rounded-2xl shadow-2xl">
+                            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+                                alt="School Building"
+                                class="w-full h-96 object-cover transform hover:scale-110 transition-transform duration-500" />
+                        </div>
                     </div>
+
+                    <div class="scroll-reveal">
+                        <div class="bg-gradient-to-br from-yellow-50 to-white rounded-2xl p-8 shadow-xl space-y-6">
+                            <div
+                                class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                                <div class="bg-blue-500 text-white p-3 rounded-full">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-1">Address</h3>
+                                    <p class="text-gray-600">Aminabad, Domkal, Murshidabad, West Bengal, India - 742406
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                                <div class="bg-green-500 text-white p-3 rounded-full">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Phone Numbers</h3>
+                                    <p class="text-gray-600">+91 8918051055</p>
+                                    <p class="text-gray-600">+91 9064431499</p>
+                                    <p class="text-gray-600">+91 9593529632</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+                                <div class="bg-red-500 text-white p-3 rounded-full">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-1">Email</h3>
+                                    <p class="text-gray-600">contact@nabodiganta.org</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-6">
+                                <a href="tel:+918918051055">
+                                    <button
+                                        class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                                        <i class="fas fa-phone-alt mr-2"></i> Call Us Now
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Modal -->
+        <div id="login-modal-bg"
+            class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center hidden">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl w-full max-w-md relative animate-scaleIn">
+                <button type="button" onclick="closeLogin()"
+                    class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 text-3xl font-bold transition">&times;</button>
+
+                <div class="text-center mb-8">
+                    <div
+                        class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user text-white text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Welcome Back!</h2>
+                    <p class="text-gray-600 mt-2">Login to your account</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label for="loginEmail" class="block mb-2 font-semibold text-gray-700">Email Address</label>
+                        <div class="relative">
+                            <i class="fas fa-envelope absolute left-4 top-4 text-gray-400"></i>
+                            <input id="loginEmail" type="email" placeholder="your@email.com" required
+                                class="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-yellow-400 focus:outline-none transition" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="loginPassword" class="block mb-2 font-semibold text-gray-700">Password</label>
+                        <div class="relative">
+                            <i class="fas fa-lock absolute left-4 top-4 text-gray-400"></i>
+                            <input id="loginPassword" type="password" placeholder="••••••••" required
+                                class="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-yellow-400 focus:outline-none transition" />
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="w-4 h-4 text-yellow-500 rounded" />
+                            <span class="text-sm text-gray-600">Remember me</span>
+                        </label>
+                        <a href="#" class="text-yellow-500 hover:text-yellow-600 text-sm font-semibold">Forgot
+                            password?</a>
+                    </div>
+
                     <button type="submit"
-                        class="w-full bg-yellow-500 text-white font-bold py-3 rounded hover:bg-yellow-600 transition">Login</button>
-                    <p class="text-center mt-4 text-sm">Don't have an account?
-                        <a href="#" class="text-blue-700 font-semibold hover:underline">Sign up</a>
+                        class="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold py-4 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-sign-in-alt mr-2"></i> Login
+                    </button>
+
+                    <p class="text-center text-gray-600">
+                        Don't have an account?
+                        <a href="#" class="text-yellow-500 font-bold hover:text-yellow-600">Sign up</a>
                     </p>
-                    <button type="button" onclick="closeLogin()"
-                        class="absolute top-2 right-3 md:top-4 md:right-5 text-gray-400 hover:text-gray-900 text-2xl font-bold">&times;</button>
                 </form>
             </div>
         </div>
 
-        <footer class="bg-gray-900 text-white mt-auto py-6">
-            <div class="container mx-auto text-center space-y-3">
-                <h3 class="text-xl font-semibold">Nabo Diganta Academy</h3>
-        
-                <div class="flex justify-center space-x-6">
-                    <a href="https://www.facebook.com/share/1AV9rPmP1Z/" target="_blank" class="text-blue-500 hover:text-white">
-                        <i class="fab fa-facebook-f text-2xl"></i>
-                    </a>
-                    <a href="https://twitter.com" target="_blank" class="text-sky-400 hover:text-white">
-                        <i class="fab fa-twitter text-2xl"></i>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-white">
-                        <i class="fab fa-instagram text-2xl"></i>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" class="text-blue-400 hover:text-white">
-                        <i class="fab fa-linkedin-in text-2xl"></i>
-                    </a>
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center space-y-6">
+                    <div class="flex justify-center mb-6">
+                        <img src="./Images/Logo.jpg" alt="Logo" class="h-16 w-16 rounded-full shadow-lg" />
+                    </div>
+                    <h3 class="text-2xl font-bold">Nabo Diganta Academy</h3>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Empowering young minds for a brighter future through
+                        quality education and holistic development.</p>
+
+                    <div class="flex justify-center gap-6">
+                        <a href="https://www.facebook.com/share/1AV9rPmP1Z/" target="_blank"
+                            class="bg-blue-600 hover:bg-blue-700 p-4 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank"
+                            class="bg-sky-500 hover:bg-sky-600 p-4 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank"
+                            class="bg-pink-600 hover:bg-pink-700 p-4 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank"
+                            class="bg-blue-700 hover:bg-blue-800 p-4 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+
+                    <div class="pt-6 border-t border-gray-700">
+                        <p class="text-gray-400">
+                            © <span id="year"></span> All Rights Reserved | Designed with <i
+                                class="fas fa-heart text-red-500"></i> by Nabo Diganta Academy
+                        </p>
+                    </div>
                 </div>
-        
-                <p class="text-sm text-gray-400">
-                    © <span id="year"></span> All Rights Reserved | Designed by Nabo Diganta Academy
-                </p>
             </div>
         </footer>
-        
 
-        <!-- External JS -->
-        <script src="main.js"></script>
+        <script src="./script.js"></script>
     </body>
 
 </html>
